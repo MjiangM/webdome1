@@ -1,0 +1,128 @@
+.site-head{
+    height: 150px;
+}
+.site-head .topbar{
+    height: 32px;
+    background-color: #2A2A2A;
+    color:white;
+    line-height: 32px;
+}
+.site-head .topbar a{
+    color:white
+}
+.site-head .topbar .shortcut-links{
+    float:left;
+}
+.site-head .topbar .shortcut-links ul{
+
+}
+/* >选择符表示子元素,表示这个盒子的儿子ul的li标签进行左浮动,方便后面的嵌套 */
+.site-head .topbar .shortcut-links > ul > li{
+    float:left;
+    margin-right: 18px;
+    font-size: 14px;
+}
+.site-head .topbar .shortcut-links > ul > li.have-menu{
+    padding-right: 12px;
+    position: relative;
+}
+.site-head .topbar .shortcut-links > ul > li.have-menu .arrow{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -6px;
+    width: 12px;
+    height: 12px;
+    transition: transform .2s ease 0s;
+}
+.site-head .topbar .shortcut-links > ul > li.have-menu:hover .arrow{
+    transform: rotate(180deg);
+}
+.site-head .topbar .shortcut-links > ul > li.have-menu .arrow b{
+    position: absolute;
+    top:2px;
+    left:3px;
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    transform: rotate(45deg);
+}
+.site-head .topbar .shortcut-links > ul > li.have-menu .arrow i{
+    position: absolute;
+    left: 3px;
+    top: 1px;
+    width: 6px;
+    height: 6px;
+    background-color: #2A2A2A;
+    transform: rotate(45deg);
+}
+.site-head .main-nav{
+    height: 40px;
+    background-color: #20BD9A;
+
+}
+.site-head .main-nav ul li{
+    float: left;
+    margin-right: 18px;
+}
+.site-head .main-nav ul li.have-menu{
+    padding-right: 16px;
+    position: relative;
+}
+/* 超级链接不能使用继承，需要设置在链接上 */
+.site-head .main-nav ul li a{
+    line-height: 40px;
+    color: white;
+    font-size: 16px;
+}
+/* 使用伪元素 */
+.site-head .main-nav ul li.have-menu::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 18px;
+    width: 0px;
+    height: 0px;
+    border: 5px solid transparent;
+    border-bottom: none;
+    border-top-color: white;
+    transition: transform .5s ease 0s;
+}
+.site-head .main-nav ul li.have-menu:hover::before{
+    transform: rotate(180deg);
+}
+.site-head .header-con{
+    height: 36px;
+    padding: 21px 0;
+}
+.site-head .header-con h1{
+    float: left;
+    color: #20BD9A;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 36px;
+}
+.site-head .header-con .soso-box{
+    float: left;
+    margin-left: 20px;
+    width: 405px;
+    padding-top: 2px;
+}
+.site-head .header-con .soso-box input{
+    width: 361px;
+    height: 28px;
+    border: 1px solid #20BD9A;
+    /* 加圆角,因为右上和右下都是没有圆角的，所以要按四个角进行设置 */
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+    /* 取消默认的外线（外线是文本框特有的东西） */
+    outline: none;
+    padding-left: 10px;
+    float: left;
+}
+.site-head .header-con .soso-box .btn{
+    float: left;
+    width: 30px;
+    height: 30px;
+    background-color: #20BD9A;
+}

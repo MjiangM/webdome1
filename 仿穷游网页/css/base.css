@@ -1,0 +1,36 @@
+/* 设置字体 */
+@font-face{
+    font-family: "PIngFangSCRegular";
+    src: url('../fonts/PingFangSCRegular.ttf') format('truetype');
+}
+body{
+    font-family: "PIngFangSCRegular";
+}
+/* 居中原子类 */
+.center-wrap {
+    /* 根据板心宽度 */
+    width: 1152px;
+    margin: 0 auto;
+}
+/* 清除浮动 */
+.clearfix {
+    overflow: hidden;
+}
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+/* 文字居中原子类 */
+.tac{
+    text-align: center;
+}
+
+/* 转化 */
+.db {
+    display: block;
+}
+.dib {
+    display: inline-block;
+}
